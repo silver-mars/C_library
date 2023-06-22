@@ -34,11 +34,11 @@ highlight BadWhitespace ctermbg=red guibg=red
 " Make trailing whitespace be flagged as bad.
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 
-"Prepare to install dictionary
-"mkdir -p ~/.vim/spell/
-"cd ~/.vim/spell
-"wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug
-"wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
+" Prepare to install dictionary
+" mkdir -p ~/.vim/spell/
+" cd ~/.vim/spell
+" wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.sug
+" wget http://ftp.vim.org/vim/runtime/spell/ru.utf-8.spl
 setlocal spell spelllang=ru,en_gb
 "On/off check orthography
 
@@ -46,7 +46,5 @@ highlight clear SpellBad
 highlight SpellBad ctermfg=Red
 " Orthography red
 
-"Режим переноса строк в vimdiff
-"if &diff
-    
-"endif
+" Running python code
+nmap <F5> <Esc>:w<CR>: !clear; python3 %<CR>
